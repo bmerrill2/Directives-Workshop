@@ -9,17 +9,19 @@
 <h2>pending</h2>
 	<form>
 		<input ng-model="query" placeholder="Search"/>
-		<button ng-click="getData()">Submit</button> 
+		<button class="btn btn-primary" pending request="getSongData()">Submit</button> 
+        <img class='loading' src="loading_gif_by_turnoffthetv-d53zh04.gif" style="height: 100px" hidden='true'>
 	</form>
+  <div ng-repeat='info in data'>{{info.artistName}}</div>
 </div>
 
 <div>
 <h2>Notifications</h2>
 	<form>
-		<input ng-model="title" placeholder="title"/>
-		<input ng-model="body" placeholder="body"/>
-		<input ng-model="icon" placeholder="iconUrl"/>
-		<button ng-click="">Submit</button> 
+		<input ng-model='scopeTitle' placeholder="title"/>
+		<input ng-model='scopeBody' placeholder="body"/>
+		<input ng-model='scopeIcon' placeholder="iconUrl"/>
+		<button notify request="" title='scopeTitle' body='scopeBody' icon='scopeIcon'>Submit</button> 
 	</form>
 </div>
 
